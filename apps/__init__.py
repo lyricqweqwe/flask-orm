@@ -1,13 +1,13 @@
 from flask import Flask
 
-from apps.ext import init_db
+from apps.ext import init_ext
 from apps.user.views import user
 
 # 入口
 def create_app():
     app = Flask(__name__)
     app.debug = True
-    init_db(app)
+    init_ext(app)
     # 注册蓝图
     register_blue(app)
     return app

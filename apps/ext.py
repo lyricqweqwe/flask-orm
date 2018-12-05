@@ -5,6 +5,11 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 
+
+def init_ext():
+    init_db()
+
+
 # 初始化数据库操作
 def init_db(app):
     # 配置数据库连接地址

@@ -6,8 +6,8 @@ migrate = Migrate()
 
 
 
-def init_ext():
-    init_db()
+def init_ext(app):
+    init_db(app=app)
 
 
 # 初始化数据库操作

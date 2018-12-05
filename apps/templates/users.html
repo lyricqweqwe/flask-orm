@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>菜单</h1>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>价格</th>
+        <th>图片</th>
+        <th>介绍</th>
+        <th>操作</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.user_id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.price }} </td>
+            <td><img width="200" src="/static/img/{{ user.image }}.jpg"></td>
+            <td>{{ user.desc }}</td>
+            <td><a href="/user/detail?uid={{ user.user_id }}">查看详情</a> <a href="#">购买</a></td>
+        </tr>
+
+    {% endfor %}
+</table>
+
+</body>
+</html>
